@@ -6,9 +6,10 @@ type AddressProps struct {
 	city, province, country string
 }
 
-type Man struct{
+type Man struct {
 	name string
 }
+
 func ChangeAddress(address *AddressProps, name string) {
 	address.city = name
 }
@@ -50,24 +51,16 @@ func main() {
 	}
 
 	ChangeAddress(address, "Pariaman")
-	fmt.Println(address) 
+	fmt.Println(address)
 
-
-isMan()
-
-
-
+	isMan()
 }
 
-
-
-
-func (man *Man) Married(){
+func (man *Man) Married() {
 	man.name = "Mr. " + man.name
 }
 
-
-func isMan(){
+func isMan() {
 	bintang := Man{name: "Bintang"}
 	bintang.Married()
 	fmt.Println(bintang.name)
